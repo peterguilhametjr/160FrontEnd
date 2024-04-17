@@ -8,7 +8,7 @@ import { CartComponent } from './cart/cart.component';
 const routes: Routes = [
   {path:'', component:HomeComponent},
   {path:'searchPage', component:SearchComponent},
-  {path:'search/:searchTerm', component:SearchComponent},
+  {path:'searchPage/search/:searchTerm', component:SearchComponent},
   {path:'offersPage', component:OffersPageComponent},
   {path:'cartPage', component:CartComponent}
 ];
