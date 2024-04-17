@@ -5,7 +5,7 @@
     </div>
     <ul>
         <li *ngFor="let restaurant of restaurants">
-            <a>
+            <a routerLink="/restaurant/{{restaurant.id}}">
                 <img src="{{restaurant.imageURL}}" alt="">
                 <div class="content">
                     <div class="name">

@@ -7,6 +7,10 @@ export class RestaurantsService {
 
   constructor() { }
 
+  getFoodById(id: number): Restaurant{
+    return this.getAll().find(restaurant => restaurant.id == id)!;
+  }
+
   getAll():Restaurant[]{
     return [
       {
@@ -35,16 +39,16 @@ export class RestaurantsService {
         stars: 2.5,
         imageURL: '/assets/images/Restaurants/McDonalds.jpg',
         location: "15479 Burger Lane, 95030"
-      },
-      {
-        id:4,
-        name:"Gojo",
-        tags: ["Hollow", "Purple"],
-        favorite: true,
-        stars: 5.0,
-        imageURL: '/assets/images/Restaurants/hollowpurp.jpg',
-        location: "00000 Smokin that Toji Pack, 95030"
       }
+      // {
+      //   id:4,
+      //   name:"Gojo",
+      //   tags: ["Hollow", "Purple"],
+      //   favorite: true,
+      //   stars: 5.0,
+      //   imageURL: '/assets/images/Restaurants/hollowpurp.jpg',
+      //   location: "00000 Smokin that Toji Pack, 95030"
+      // }
     ]
   }
 }

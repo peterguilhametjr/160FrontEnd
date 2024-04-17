@@ -2,6 +2,9 @@ header{
     background: #1F456E;
     padding: 0;
     border-bottom: 1px solid lightskyblue;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
 }
 
 a{
