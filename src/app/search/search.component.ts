@@ -1,21 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {RestaurantsService} from '../services/restaurants/restaurants.service';
 import {Restaurant} from '../shared/models/Restaurant'
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
 })
-export class SearchComponent {
+export class SearchComponent implements OnInit{
 
   restaurants:Restaurant[] = [];
-  constructor(private restaurantsService:RestaurantsService){
+  searchTitle: string;
 
+  constructor(private restaurantsService:RestaurantsService, private route:ActivatedRoute){
+    this.searchTitle = 'Recommended restaurants nearby';
   }
 
   ngOnInit(): void {
-    this.restaurants = this.restaurantsService.getAll();
+    this.route.params.subscribe(params => {
+      if (params['searchTerm']) {
+        this.restaurants = this.restaurantsService.getAll().filter(restuarant => restuarant.name.toLowerCase().includes(params['searchTerm'].toLowerCase()));
+      } 
+      else {
+        this.restaurants = this.restaurantsService.getAll();
+      }
+    })
   }
-
 }

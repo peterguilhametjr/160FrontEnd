@@ -1,9 +1,8 @@
+<app-search-bar></app-search-bar>
 <div class="search-page">
-    <div class="search-bar">
-        <input type="text" placeholder="I alone am the honored one...">
-        <button>Search</button>
+    <div class="recommend">
+        <h2>{{searchTitle}}</h2>
     </div>
-    <h2>Recommended Restaurants Nearby!</h2>
     <ul>
         <li *ngFor="let restaurant of restaurants">
             <a>
@@ -15,8 +14,16 @@
                     <span class="favorite {{restaurant.favorite?'':'not'}}">
                         ♥
                     </span>
-                    <div class="rating">
-                        Rating: {{restaurant.stars}} / 5
+                    <div class="footer">
+                        <div class="rating">
+                            {{restaurant.stars}} / 5
+                        </div>
+                        <div class="tags">
+                            {{restaurant.tags}}
+                        </div>
+                        <div class="location">
+                            {{restaurant.location}}
+                        </div>
                     </div>
                 </div>
             </a>
