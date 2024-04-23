@@ -66,8 +66,11 @@ li a{
     background-color: #1F456E;
     cursor: pointer;
     position: absolute;
-    right: 1rem;
-    top: 3rem;
+    right: 0.8rem;
+    top: 2.5rem;
+    width: 5rem;
+    height: 1.8rem;
+    text-align: center;
     /* font-size: 0.9rem; */
 }
 
