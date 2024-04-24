@@ -1,0 +1,76 @@
+.owner-page {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+li a{
+    height: 8rem;
+    width: 50rem;
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #1F456E;
+    position: relative;
+}
+
+.restaurant-list {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-restaurant-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 30px;
+    background-color: #1F456E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.offers-page{
+    padding-top: 80px;
+}
+
+.restaurant{
+    position: absolute;
+    font-weight: bold;
+    left: 1rem;
+    font-size: 2rem;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: lightgrey;
+    border-radius: 0 0 1rem 1rem;
+    padding: 0.5rem;
+}
+
+.update-btn {
+    border-radius: 0.8rem;
+    color: white;
+    background-color: #1F456E;
+    cursor: pointer;
+    position: absolute;
+    right: 0.8rem;
+    top: 2.5rem;
+    width: 5rem;
+    height: 1.8rem;
+    text-align: center;
+}
+

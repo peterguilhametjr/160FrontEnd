@@ -1,0 +1,32 @@
+<app-search-bar (input)="filterRestaurants($event)"></app-search-bar>
+<div class="search-page">
+    <div class="recommend">
+        <h2>{{ searchTitle }}</h2>
+    </div>
+    <ul>
+        <li *ngFor="let restaurant of filteredRestaurants">
+            <a routerLink="/restaurant/{{restaurant.id}}">
+                <img [src]="restaurant.imageURL" alt="">
+                <div class="content">
+                    <div class="name">
+                        {{ restaurant.name }}
+                    </div>
+                    <span class="favorite" [class.not]="!restaurant.favorite">
+                        ♥
+                    </span>
+                    <div class="footer">
+                        <div class="rating">
+                            {{ restaurant.stars }} / 5
+                        </div>
+                        <div class="tags">
+                            {{ restaurant.tags }}
+                        </div>
+                        <div class="location">
+                            {{ restaurant.location }}
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

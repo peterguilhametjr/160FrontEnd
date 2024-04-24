@@ -14,14 +14,16 @@ export class OffersService {
         user_name:"The Burger Dude",
         restaurant: "Burger King",
         discount: 10,
-        location: "15478 Burger Lane, 95030"
+        location: "15478 Burger Lane, 95030",
+        zipcode: "12345"
       },
       {
         id:2,
         user_name:"The Chicken Dude",
         restaurant: "KFC",
         discount: 15,
-        location: "25718 Chicken Lane, 95030"
+        location: "25718 Chicken Lane, 95030",
+        zipcode: "45678"
       }
     ]
   }
