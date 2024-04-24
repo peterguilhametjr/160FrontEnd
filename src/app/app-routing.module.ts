@@ -7,6 +7,8 @@ import { CartComponent } from './user/cart/cart.component';
 import { RestaurantPageComponent } from './user/restaurant-page/restaurant-page.component';
 import { OwnerPageComponent } from './owner/owner-page/owner-page.component';
 import { DriverPageComponent } from './driver/driver-page/driver-page.component';
+import { AddRestaurantComponent } from './owner/owner-page/add-restaurant/add-restaurant.component';
+import { UpdateRestaurantComponent } from './owner/owner-page/update-restaurant/update-restaurant.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -16,7 +18,9 @@ const routes: Routes = [
   {path:'cartPage', component:CartComponent},
   {path:'restaurant/:id', component:RestaurantPageComponent},
   {path:'ownerPage', component:OwnerPageComponent},
-  {path:'driverPage', component:DriverPageComponent}
+  {path:'driverPage', component:DriverPageComponent},
+  {path:'ownerPage/addPage', component:AddRestaurantComponent},
+  {path:'ownerPage/updatePage/:id', component:UpdateRestaurantComponent}
 ];
 
 @NgModule({

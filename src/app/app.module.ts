@@ -12,6 +12,10 @@ import { OffersPageComponent } from './user/offers-page/offers-page.component';
 import { RestaurantPageComponent } from './user/restaurant-page/restaurant-page.component';
 import { OwnerPageComponent } from './owner/owner-page/owner-page.component';
 import { DriverPageComponent } from './driver/driver-page/driver-page.component';
+import { OwnerTaskBarComponent } from './owner/owner-task-bar/owner-task-bar.component';
+import { AddRestaurantComponent } from './owner/owner-page/add-restaurant/add-restaurant.component';
+import { RestaurantDetailsComponent } from './owner/owner-page/restaurant-details/restaurant-details.component';
+import { UpdateRestaurantComponent } from './owner/owner-page/update-restaurant/update-restaurant.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { DriverPageComponent } from './driver/driver-page/driver-page.component'
     OffersPageComponent,
     RestaurantPageComponent,
     OwnerPageComponent,
-    DriverPageComponent
+    DriverPageComponent,
+    OwnerTaskBarComponent,
+    AddRestaurantComponent,
+    RestaurantDetailsComponent,
+    UpdateRestaurantComponent
   ],
   imports: [
     BrowserModule,

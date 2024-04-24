@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {OffersService} from '../services/offers/offers.service';
-import {Offer} from '../shared/models/Offer'
+import {OffersService} from '../../services/offers/offers.service';
+import {Offer} from '../../shared/models/Offer'
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

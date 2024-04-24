@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Restaurant } from '../shared/models/Restaurant';
+import { Restaurant } from '../../shared/models/Restaurant';
 import { ActivatedRoute } from '@angular/router';
-import { RestaurantsService } from '../services/restaurants/restaurants.service';
+import { RestaurantsService } from '../../services/restaurants/restaurants.service';
 
 @Component({
   selector: 'app-restaurant-page',
