@@ -4,4 +4,6 @@ export class Offer{
     restaurant!:string;
     discount!:number;
     location!:string;
+    zipcode!:string;
+  name: any;
 }

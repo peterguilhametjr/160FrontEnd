@@ -2,7 +2,7 @@
 <app-search-bar></app-search-bar>
 <div class="search-page">
     <div class="recommend">
-        <h2>{{searchTitle}}</h2>
+        <h2>{{ searchTitle }}</h2>
     </div>
     <ul>
         <li *ngFor="let restaurant of restaurants">
@@ -10,7 +10,7 @@
                 <img src="{{restaurant.imageURL}}" alt="">
                 <div class="content">
                     <div class="name">
-                        {{restaurant.name}}
+                        {{ restaurant.name }}
                     </div>
                     <!-- <span class="favorite {{restaurant.favorite?'':'not'}}">
                         ♥
@@ -20,10 +20,10 @@
                             {{restaurant.stars}} ★
                         </div>
                         <div class="tags">
-                            {{restaurant.tags}}
+                            {{ restaurant.tags }}
                         </div>
                         <div class="location">
-                            {{restaurant.location}}
+                            {{ restaurant.location }}
                         </div>
                     </div>
                 </div>

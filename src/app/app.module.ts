@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { HttpClient, provideHttpClient, withFetch, HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './user/header/header.component';
+import { SearchComponent } from './user/search/search.component';
+import { SearchBarComponent } from './user/search-bar/search-bar.component';
 import { HeaderComponent } from './user/header/header.component';
 import { SearchComponent } from './user/search/search.component';
 import { SearchBarComponent } from './user/search-bar/search-bar.component';
@@ -39,8 +44,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
 
+providers: [provideHttpClient(withFetch()), provideClientHydration()],
+
+bootstrap: [AppComponent]
+})
 export class AppModule { }
