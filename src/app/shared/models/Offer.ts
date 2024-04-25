@@ -5,5 +5,5 @@ export class Offer{
     discount!:number;
     location!:string;
     zipcode!:string;
-  name: any;
+    name: any;
 }

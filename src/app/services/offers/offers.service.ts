@@ -15,7 +15,8 @@ export class OffersService {
         restaurant: "Burger King",
         discount: 10,
         location: "15478 Burger Lane, 95030",
-        zipcode: "12345"
+        zipcode: "12345",
+        name: "blah"
       },
       {
         id:2,
@@ -23,7 +24,8 @@ export class OffersService {
         restaurant: "KFC",
         discount: 15,
         location: "25718 Chicken Lane, 95030",
-        zipcode: "45678"
+        zipcode: "45678",
+        name: "blah"
       }
     ]
   }
