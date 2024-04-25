@@ -7,7 +7,7 @@
                 <div class="restaurant_name">
                     {{restaurant.name}}
                 </div>
-                <button class="update-btn" [routerLink]="['/ownerPage/updatePage/:id']">
+                <button class="update-btn" [routerLink]="'/updatePage/' + restaurant.id">
                     Update
                 </button>
                 <div class="footer">

@@ -14,8 +14,8 @@ import { OwnerPageComponent } from './owner/owner-page/owner-page.component';
 import { DriverPageComponent } from './driver/driver-page/driver-page.component';
 import { OwnerTaskBarComponent } from './owner/owner-task-bar/owner-task-bar.component';
 import { AddRestaurantComponent } from './owner/owner-page/add-restaurant/add-restaurant.component';
-import { RestaurantDetailsComponent } from './owner/owner-page/restaurant-details/restaurant-details.component';
 import { UpdateRestaurantComponent } from './owner/owner-page/update-restaurant/update-restaurant.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,13 +31,13 @@ import { UpdateRestaurantComponent } from './owner/owner-page/update-restaurant/
     DriverPageComponent,
     OwnerTaskBarComponent,
     AddRestaurantComponent,
-    RestaurantDetailsComponent,
     UpdateRestaurantComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,7 +20,7 @@ const routes: Routes = [
   {path:'ownerPage', component:OwnerPageComponent},
   {path:'driverPage', component:DriverPageComponent},
   {path:'ownerPage/addPage', component:AddRestaurantComponent},
-  {path:'ownerPage/updatePage/:id', component:UpdateRestaurantComponent}
+  {path:'updatePage/:id', component:UpdateRestaurantComponent}
 ];
 
 @NgModule({

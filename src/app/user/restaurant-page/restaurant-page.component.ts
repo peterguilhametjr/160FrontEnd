@@ -13,7 +13,7 @@ export class RestaurantPageComponent implements OnInit {
   constructor(private activatedRoute:ActivatedRoute, private restaurantsService: RestaurantsService){
     activatedRoute.params.subscribe((params) => {
       if(params['id'])
-        this.restaurant = restaurantsService.getFoodById(params['id']);
+        this.restaurant = restaurantsService.getRestaurantById(params['id']);
     })
    }
 

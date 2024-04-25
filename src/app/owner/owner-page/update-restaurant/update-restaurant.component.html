@@ -1,8 +1,29 @@
 <app-owner-task-bar></app-owner-task-bar>
-<div class="container">
-    <div class="restaurant-updt">
-        <h2>Update Your Restaurant's Information Below</h2>
+<form [formGroup]="restaurantForm" (ngSubmit)="onSubmit()">
+  <div class="restaurant-reg">
+    <h2>Update Restaurant Information</h2>
+  </div>
+
+  <div class="input-restaurant-details">
+    <label for="restaurant-name">Restaurant Name</label>
+    <input id="restaurant-name" type="text" formControlName="name">
+    <label for="restaurant-loc">Restaurant Location</label>
+    <input id="restaurant-loc" type="text" formControlName="location">
+    <label for="restaurant-rate">Rating</label>
+    <input id="restaurant-rate" type="number" formControlName="stars">
+
+    <div formArrayName="menu" class="menuItems">
+      <div *ngFor="let menuItem of menu.controls; let i = index">
+        <div [formGroupName]="i">
+          <label for="foodName">Food Name</label>
+          <input id="foodName" type="text" formControlName="foodName">
+          <label for="foodPrice">Price</label>
+          <input id="foodPrice" type="number" formControlName="foodPrice">
+          <button type="button" (click)="removeMenuItem(i)">Remove</button>
+        </div>
+      </div>
     </div>
-    <app-restaurant-details></app-restaurant-details>
-    <button class="updt-btn">Update</button>
-</div>
+    <button type="button" class="add-men-btn" (click)="addMenuItem()">Add Menu Item</button>
+    <button type="submit" class="update-btn">Update</button>
+  </div>
+</form>

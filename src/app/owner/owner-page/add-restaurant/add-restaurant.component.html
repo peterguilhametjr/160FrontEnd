@@ -1,8 +1,32 @@
 <app-owner-task-bar></app-owner-task-bar>
-<div class="container">
+<form [formGroup]="restaurantForm" (ngSubmit)="onSubmit()">
     <div class="restaurant-reg">
-        <h2>Please Enter the Following Information</h2>
+      <h2>Please Enter the Following Information</h2>
     </div>
-    <app-restaurant-details></app-restaurant-details>
-    <button class="reg-btn">Register</button>
-</div>
+  
+    <div class="input-restaurant-details">
+      <label for="restaurant-name">Restaurant Name</label>
+      <input id="restaurant-name" type="text" formControlName="name">
+      <label for="restaurant-loc">Restaurant Location</label>
+      <input id="restaurant-loc" type="text" formControlName="location">
+      <label for="restaurant-rate">Rating</label>
+      <input id="restaurant-rate" type="number" formControlName="rating">
+  
+      <div formArrayName="menuItems" class="menuItems">
+        <div *ngFor="let menuItem of menuItems.controls; let i = index">
+          <div [formGroupName]="i">
+            <label for="foodName">Food Name</label>
+            <input id="foodName" type="text" formControlName="foodName">
+            <label for="foodPrice">Price</label>
+            <input id="foodPrice" type="number" formControlName="foodPrice">
+            <button type="button" (click)="removeMenuItem(i)">Remove</button>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="add-men-btn" (click)="addMenuItem()">Add Menu Item</button>
+      <button type="submit" class="reg-btn">Register</button>
+    </div>
+
+
+  </form>
+  
